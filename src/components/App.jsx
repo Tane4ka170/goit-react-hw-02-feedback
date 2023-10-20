@@ -6,10 +6,11 @@ import Notification from './Notification/Notification';
 
 class App extends React.Component{
   state = {
-  good: 0,
-  neutral: 0,
-  bad: 0
+    good: 0,
+    neutral: 0,
+    bad: 0
   }
+
   onLeaveFeedback = state => {
     this.setState(prevState => ({
       [state]: prevState[state] + 1,
@@ -28,7 +29,6 @@ class App extends React.Component{
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state);
     return (
       <div className='container'>
